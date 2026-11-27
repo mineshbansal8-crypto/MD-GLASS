@@ -1,195 +1,419 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MD Glass And Railings | Premium Glass Solutions</title>
+<meta name="description" content="MD Glass And Railings — premium glass showers, glass railings, office partitions and custom glass solutions in Brampton, Ontario.">
+<title>MD Glass And Railings | Modern Glass Solutions</title>
 
 <style>
+:root {
+  --ink: #17232b;
+  --muted: #64727a;
+  --gold: #b9945a;
+  --pale: #f4f6f6;
+  --white: #fff;
+}
+
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-font-family: Arial, sans-serif;
-color: #222;
-background: #fff;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
 }
 
 header {
-background: #101820;
-color: white;
-padding: 20px 7%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #e8ecee;
 }
 
-.logo {
-font-size: 25px;
-font-weight: bold;
-color: #d6b36a;
+.nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-nav a {
-color: white;
-text-decoration: none;
-margin: 10px;
-font-size: 14px;
+.brand {
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: .08em;
 }
 
-nav a:hover {
-color: #d6b36a;
-}
-
-.hero {
-min-height: 520px;
-background: linear-gradient(#0008,#0008),
-url('hero.jpg') center/cover;
-display: flex;
-align-items: center;
-padding: 8%;
-color: white;
-}
-
-.hero h1 {
-font-size: 48px;
-max-width: 650px;
-margin-bottom: 20px;
-}
-
-.hero p {
-font-size: 18px;
-line-height: 1.7;
-}
-
-.btn {
-display: inline-block;
-background: #c5a15c;
-color: white;
-padding: 14px 25px;
-margin-top: 25px;
-border-radius: 5px;
-text-decoration: none;
-font-weight: bold;
-}
-
-section {
-padding: 65px 7%;
-}
-
-.heading {
-text-align: center;
-font-size: 32px;
-margin-bottom: 15px;
-}
-
-.subheading {
-text-align: center;
-color: #777;
-margin-bottom: 35px;
-}
-
-.about {
-text-align: center;
-line-height: 1.9;
-max-width: 850px;
-margin: auto;
-}
-
-.products {
-background: #f5f6f7;
-}
-
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-gap: 25px;
-}
-
-.card {
-background: white;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: 0 4px 18px #0001;
-}
-
-.card img {
-width: 100%;
-height: 230px;
-object-fit: cover;
-}
-
-.card h3 {
-padding: 17px 17px 5px;
-}
-
-.card p {
-padding: 5px 17px 20px;
-color: #666;
-line-height: 1.6;
-}
-
-.services {
-background: #101820;
-color: white;
-}
-
-.service-card {
-padding: 28px;
-border: 1px solid #555;
-border-radius: 10px;
-text-align: center;
-}
-
-.service-card h3 {
-color: #d6b36a;
-margin-bottom: 12px;
-}
-
-.service-card p {
-line-height: 1.7;
-color: #ddd;
-}
-
-.contact {
-text-align: center;
-background: #f5f6f7;
-}
-
-.contact p {
-margin: 15px;
-}
-
-footer {
-background: #101820;
-color: white;
-padding: 25px;
-text-align: center;
-}
-
-@media(max-width:600px) {
-header {
-justify-content: center;
-gap: 15px;
+.brand span {
+  color: var(--gold);
 }
 
 nav {
-text-align: center;
+  display: flex;
+  gap: 27px;
+  font-size: .92rem;
+  color: #43515a;
 }
 
-nav a {
-display: inline-block;
-margin: 7px;
+nav a:hover {
+  color: var(--gold);
 }
 
-.hero h1 {
-font-size: 34px;
+.btn {
+  display: inline-block;
+  padding: 13px 22px;
+  background: var(--gold);
+  color: white;
+  border-radius: 3px;
+  font-weight: 700;
+  transition: .2s;
 }
+
+.btn:hover {
+  background: #9d7842;
+  transform: translateY(-1px);
+}
+
+.btn.dark {
+  background: var(--ink);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(90deg,rgba(10,23,31,.88),rgba(10,23,31,.46)),
+    url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85')
+    center/cover;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 90px 0;
+}
+
+.eyebrow {
+  color: #dfc18e;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.7rem,6vw,5.1rem);
+  line-height: 1.05;
+  margin: 18px 0 22px;
+  letter-spacing: -.04em;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: #e3e8ea;
+  max-width: 590px;
+  margin: 0 0 30px;
+}
+
+section {
+  padding: 88px 0;
+}
+
+.section-tag {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .17em;
+  font-weight: 700;
+  font-size: .75rem;
+}
+
+h2 {
+  font-size: clamp(2rem,4vw,3rem);
+  line-height: 1.15;
+  margin: 12px 0 18px;
+}
+
+.intro {
+  max-width: 730px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-photo {
+  min-height: 410px;
+  border-radius: 5px;
+  background:
+    url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85')
+    center/cover;
+}
+
+/* SERVICES */
+
+.services {
+  background: var(--pale);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
+  margin-top: 38px;
+}
+
+.card {
+  background: white;
+  padding: 26px 23px;
+  border: 1px solid #e8eded;
+  min-height: 250px;
+}
+
+.number {
+  color: var(--gold);
+  font-weight: 800;
+  font-size: .8rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 18px 0 10px;
+}
+
+.card p {
+  font-size: .94rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.service-image {
+  height: 150px;
+  margin: -26px -23px 20px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  grid-template-rows: 230px 230px;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #dce2e4;
+}
+
+.gallery-item:first-child {
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.045);
+}
+
+.gallery-item span {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  color: white;
+  font-weight: 700;
+  background: rgba(10,20,25,.5);
+  padding: 7px 11px;
+}
+
+/* WHY CHOOSE US */
+
+.why {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.why-item {
+  border-top: 2px solid var(--gold);
+  padding-top: 18px;
+}
+
+.why-item p {
+  color: var(--muted);
+}
+
+/* CTA */
+
+.cta {
+  background: var(--ink);
+  color: white;
+  text-align: center;
+}
+
+.cta p {
+  color: #c8d0d4;
+  max-width: 650px;
+  margin: 0 auto 28px;
+}
+
+/* CONTACT */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 35px;
+}
+
+.contact-details p {
+  color: var(--muted);
+  margin: 10px 0;
+}
+
+.contact-details strong {
+  color: var(--ink);
+}
+
+.map {
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+  border-radius: 4px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #101a20;
+  color: #c3cdd2;
+  padding: 26px 0;
+  font-size: .88rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+  .cards {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    min-height: 300px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 180px 180px;
+  }
+
+  .gallery-item:first-child {
+    grid-row: span 2;
+  }
+}
+
+@media(max-width:600px) {
+  .nav {
+    height: auto;
+    padding: 17px 0;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: .85rem;
+  }
+
+  .nav .btn {
+    display: none;
+  }
+
+  .hero {
+    min-height: 570px;
+  }
+
+  .hero-content {
+    padding: 75px 0;
+  }
+
+  section {
+    padding: 65px 0;
+  }
+
+  .cards,
+  .why {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 210px 150px 150px;
+    gap: 10px;
+  }
+
+  .gallery-item:first-child {
+    grid-column: span 2;
+    grid-row: auto;
+  }
 }
 </style>
 </head>
@@ -197,105 +421,313 @@ font-size: 34px;
 <body>
 
 <header>
-<div class="logo">MD GLASS & RAILINGS</div>
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#catalog">Catalogue</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      MD <span>GLASS</span> AND RAILINGS
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="btn" href="tel:+14379713727">Call Us</a>
+  </div>
 </header>
 
-<div class="hero" id="home">
-<div>
-<h1>Bringing Elegance, Quality & Modern Design</h1>
-<p>Premium Glass Showers, Glass Railings and Modern Glass Solutions.</p>
-<a href="#catalog" class="btn">Explore Our Catalogue</a>
-</div>
-</div>
+<main>
 
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">
+        Premium glass solutions · Brampton, Ontario
+      </div>
+
+      <h1>
+        Bringing Elegance, Quality &amp; Modern Design to Every Space
+      </h1>
+
+      <p>
+        Beautifully crafted glass showers, railings and partitions
+        designed to elevate residential and commercial spaces.
+      </p>
+
+      <a class="btn" href="#contact">Discuss Your Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section id="about">
-<h2 class="heading">About MD Glass And Railings</h2>
-<p class="subheading">Quality • Elegance • Craftsmanship</p>
-<div class="about">
-At MD Glass And Railings, we specialize in premium glass
-solutions that combine modern design, functionality and
-durability. We transform residential and commercial spaces
-with elegant glass installations and exceptional craftsmanship.
-</div>
+  <div class="container about-grid">
+    <div>
+      <div class="section-tag">About MD Glass And Railings</div>
+
+      <h2>
+        Thoughtful design.<br>
+        Quality craftsmanship.
+      </h2>
+
+      <p class="intro">
+        At MD Glass And Railings, we specialize in premium glass
+        solutions that combine modern design, functionality and
+        durability. We are committed to transforming residential
+        and commercial spaces with elegant glass installations
+        and exceptional craftsmanship.
+      </p>
+
+      <p class="intro">
+        From a clean, contemporary shower enclosure to a statement
+        glass railing, we bring care and attention to every project.
+      </p>
+
+      <a class="btn dark" href="#services">
+        Explore Our Services
+      </a>
+    </div>
+
+    <div class="about-photo"></div>
+  </div>
 </section>
 
-<section class="products" id="catalog">
-<h2 class="heading">Our Glass Catalogue</h2>
-<p class="subheading">Discover our premium glass collections</p>
-
-<div class="grid">
-
-<div class="card">
-<img src="shower1.jpg" alt="Frameless glass shower">
-<h3>Frameless Glass Shower</h3>
-<p>Elegant frameless shower enclosures for modern bathrooms.</p>
-</div>
-
-<div class="card">
-<img src="shower2.jpg" alt="Sliding glass shower">
-<h3>Sliding Glass Shower</h3>
-<p>Stylish and space-saving sliding shower solutions.</p>
-</div>
-
-<div class="card">
-<img src="shower3.jpg" alt="Corner glass shower">
-<h3>Corner Glass Shower</h3>
-<p>Beautiful custom corner shower enclosures.</p>
-</div>
-
-<div class="card">
-<img src="railing1.jpg" alt="Glass railing">
-<h3>Glass Railings</h3>
-<p>Modern glass railing systems for balconies and staircases.</p>
-</div>
-
-</div>
-</section>
-
+<!-- SERVICES -->
 <section class="services" id="services">
-<h2 class="heading">Our Services</h2>
-<p class="subheading">Professional glass installation solutions</p>
+  <div class="container">
+    <div class="section-tag">What We Do</div>
 
-<div class="grid">
-<div class="service-card">
-<h3>Glass Showers</h3>
-<p>Custom-designed frameless and semi-frameless glass shower enclosures.</p>
-</div>
+    <h2>Glass solutions for every space</h2>
 
-<div class="service-card">
-<h3>Glass Railings</h3>
-<p>Premium glass railing systems for modern interiors and exteriors.</p>
-</div>
+    <p class="intro">
+      A refined finish, practical function and a modern look —
+      tailored to your project.
+    </p>
 
-<div class="service-card">
-<h3>Custom Glass Work</h3>
-<p>Beautiful glass solutions designed according to your requirements.</p>
-</div>
-</div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=85" alt="Glass shower">
+        </div>
+        <div class="number">01 / SHOWERS</div>
+        <h3>Glass Showers</h3>
+        <p>
+          Custom-designed frameless and semi-frameless glass
+          shower enclosures for a clean, open bathroom feel.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Glass railings">
+        </div>
+        <div class="number">02 / RAILINGS</div>
+        <h3>Glass Railings</h3>
+        <p>
+          Modern glass railing systems for staircases, balconies
+          and interiors, bringing openness and style.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85" alt="Office partitions">
+        </div>
+        <div class="number">03 / COMMERCIAL</div>
+        <h3>Glass Partitions</h3>
+        <p>
+          Stylish glass partitions for offices and commercial
+          spaces, helping create bright, contemporary interiors.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Custom glass projects">
+        </div>
+        <div class="number">04 / CUSTOM</div>
+        <h3>Custom Glass Projects</h3>
+        <p>
+          Tailor-made glass solutions designed around your space,
+          needs and preferred finish.
+        </p>
+      </article>
+
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="contact">
-<h2 class="heading">Contact Us</h2>
-<p>Looking for premium glass solutions?</p>
-<p><strong>MD Glass And Railings</strong></p>
-<p>Call us for enquiries and quotations.</p>
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-tag">Project Inspiration</div>
 
-<a class="btn" href="https://wa.me/91YOURNUMBER">
-Contact Us on WhatsApp
-</a>
+    <h2>Modern glass. Beautiful spaces.</h2>
+
+    <p class="intro">
+      Explore the clean lines, natural light and contemporary
+      finishes that inspire our glass solutions.
+    </p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1300&q=90" alt="Modern interiors">
+        <span>Modern Interiors</span>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=85" alt="Glass showers">
+        <span>Glass Showers</span>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Glass design">
+        <span>Glass &amp; Design</span>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85" alt="Commercial spaces">
+        <span>Commercial Spaces</span>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Custom projects">
+        <span>Custom Projects</span>
+      </div>
+
+    </div>
+
+    <p style="font-size:.82rem;color:#7b858a;margin-top:14px">
+      Note: These are illustrative inspiration photos.
+      Replace them with your own completed-project photos.
+    </p>
+  </div>
 </section>
 
+<!-- WHY CHOOSE US -->
+<section>
+  <div class="container">
+    <div class="section-tag">Why Choose Us</div>
+
+    <h2>
+      Made to look exceptional. Built to work beautifully.
+    </h2>
+
+    <div class="why">
+
+      <div class="why-item">
+        <h3>Modern design</h3>
+        <p>
+          Clean lines and elegant glass details that complement your space.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <h3>Quality-focused</h3>
+        <p>
+          Durability and functionality are central to every installation.
+        </p>
+      </div>
+
+      <div class="why-item">
+        <h3>Made for your project</h3>
+        <p>
+          Custom solutions for residential and commercial requirements.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+  <div class="container">
+    <div class="section-tag">Let's Get Started</div>
+
+    <h2>Have a glass project in mind?</h2>
+
+    <p>
+      Talk to MD Glass And Railings about your space
+      and the solution you have in mind.
+    </p>
+
+    <a class="btn" href="tel:+14379713727">
+      Call 437-971-3727
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-tag">Contact</div>
+
+    <h2>Let's talk about your project</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-details">
+        <p><strong>MD Glass And Railings</strong></p>
+
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+14379713727">437-971-3727</a>
+        </p>
+
+        <p>
+          <strong>Address:</strong>
+          92 Pannahill Drive, Brampton, L6P 3B3,
+          Ontario, Canada
+        </p>
+
+        <p>
+          <strong>Serving:</strong>
+          Residential and commercial projects
+        </p>
+
+        <a class="btn dark" target="_blank" rel="noopener"
+        href="https://www.google.com/maps/search/?api=1&query=92+Pannahill+Drive%2C+Brampton%2C+ON+L6P+3B3">
+          Get Directions
+        </a>
+      </div>
+
+      <iframe
+        class="map"
+        title="Map to MD Glass And Railings"
+        loading="lazy"
+        src="https://www.google.com/maps?q=92%20Pannahill%20Drive%2C%20Brampton%2C%20ON%20L6P%203B3&output=embed">
+      </iframe>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
-<p>© 2026 MD Glass And Railings. All Rights Reserved.</p>
-<p>Premium Glass Solutions | Modern Designs</p>
+  <div class="container">
+    <span>
+      © <span id="year">2026</span>
+      MD Glass And Railings. All rights reserved.
+    </span>
+
+    <span>
+      Bringing Elegance, Quality &amp; Modern Design to Every Space
+    </span>
+  </div>
 </footer>
+
+<script>
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+</script>
 
 </body>
 </html>
